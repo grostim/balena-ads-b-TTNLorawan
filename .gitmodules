@@ -1,0 +1,6 @@
+[submodule "balena-ads-b"]
+	path = balena-ads-b
+	url = git@github.com:ketilmo/balena-ads-b.git
+[submodule "ttn-resin-gateway-rpi-1"]
+	path = ttn-resin-gateway-rpi-1
+	url = git@github.com:kersing/ttn-resin-gateway-rpi-1
