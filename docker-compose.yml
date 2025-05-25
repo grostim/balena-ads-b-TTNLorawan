@@ -272,7 +272,7 @@ services:
     labels:
       io.balena.features.supervisor-api: '1'
   autohupr:
-    build: ./autohupr
+    build: ./balena-ads-b/autohupr
     tmpfs:
       - /tmp/work
     labels:
