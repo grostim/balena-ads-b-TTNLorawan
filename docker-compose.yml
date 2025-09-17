@@ -4,10 +4,13 @@ volumes:
   airnav-radar:
   tar1090:
 services:
-  ttn:
+  basicstation:
+    image: xoseperez/basicstation:latest
+    container_name: basicstation
     restart: unless-stopped
-    build: ./ttn-resin-gateway-rpi-1
     privileged: true
+    environment:
+      MODEL: "SX1303"
     labels:
       io.balena.features.supervisor-api: '1'
   kiosk:
