@@ -5,13 +5,16 @@ volumes:
   tar1090:
 services:
   basicstation:
-    image: xoseperez/basicstation:latest
+    build: 
+      context: ./basicstation-docker
+      args:
+        ARCH: aarch64
+        VARIANT: std
     container_name: basicstation
     restart: unless-stopped
     privileged: true
-    environment:
-      MODEL: "SX1303"
     labels:
+      io.balena.features.journal-logs: '1'
       io.balena.features.supervisor-api: '1'
   kiosk:
     restart: unless-stopped
